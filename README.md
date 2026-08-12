@@ -58,10 +58,10 @@ brew install --cask mantrandev/tap/hkey-vni
 
 Mở `Sources/macOS/Mkey.xcodeproj`, chọn scheme `Mkey`, build. Target và scheme vẫn giữ tên `Mkey`; app build ra là `HKey.app` qua `PRODUCT_NAME`.
 
-- **Debug:** bundle ID `com.mantrandev.mkey.dev`
-- **Release:** bundle ID `com.mantrandev.mkey`
+- **Debug:** bundle ID `com.mantrandev.hkey.dev`
+- **Release:** bundle ID `com.mantrandev.hkey`
 
-Bundle ID giữ nguyên `mkey` để bản cài sẵn không bị mất quyền Accessibility và cấu hình đã lưu.
+Bundle ID riêng `hkey` để HKey và Mkey cài song song không đè cấu hình, quyền Accessibility và login item của nhau.
 
 Đóng gói DMG:
 
