@@ -19,7 +19,7 @@ Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantra
 
 ## Yêu cầu
 
-macOS 14.0+.
+macOS 13.0+ (Ventura).
 
 **Gatekeeper:** Vì app chưa được notarize, cần bỏ chặn thủ công sau khi cài:  
 *System Settings → Privacy & Security* → tìm `HKey` → bấm **Open Anyway**.
