@@ -6,9 +6,9 @@ Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantra
 
 | Bản | Kiểu gõ | Link |
 |---|---|---|
-| Đầy đủ (Telex + VNI) | Telex / VNI | [HKey-v0.0.4.dmg](https://github.com/mantrandev/HKey/releases/tag/v0.0.4) |
-| VNI only | VNI (cố định) | [HKey-vni-v0.0.4.dmg](https://github.com/mantrandev/HKey/releases/tag/vni-v0.0.4) |
-| Telex only | Telex (cố định) | [HKey-telex-v0.0.4.dmg](https://github.com/mantrandev/HKey/releases/tag/telex-v0.0.4) |
+| Đầy đủ (Telex + VNI) | Telex / VNI | [HKey-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/v0.0.5) |
+| VNI only | VNI (cố định) | [HKey-vni-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/vni-v0.0.5) |
+| Telex only | Telex (cố định) | [HKey-telex-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/telex-v0.0.5) |
 
 ## Screenshot
 
@@ -26,7 +26,7 @@ Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantra
 
 ## Yêu cầu
 
-macOS 13.0+ (Ventura).
+macOS 13.0+ (Ventura), Apple Silicon. Build arm64-only nên không chạy trên Mac Intel.
 
 **Gatekeeper:** Vì app chưa được notarize, cần bỏ chặn thủ công sau khi cài:  
 *System Settings → Privacy & Security* → tìm `HKey` → bấm **Open Anyway**.
@@ -44,8 +44,17 @@ macOS 13.0+ (Ventura).
 
 ```bash
 brew tap mantrandev/tap
-brew install --cask mantrandev/tap/hkey
+brew install --cask --no-quarantine mantrandev/tap/hkey
 ```
+
+Bản cố định một kiểu gõ — chỉ cài **một** trong ba, chúng dùng chung `HKey.app`:
+
+```bash
+brew install --cask --no-quarantine mantrandev/tap/hkey-vni
+brew install --cask --no-quarantine mantrandev/tap/hkey-telex
+```
+
+`--no-quarantine` là bắt buộc: app chưa notarize nên nếu để Homebrew gắn quarantine, Gatekeeper sẽ chặn (`spctl` trả `rejected`) và phải bỏ chặn tay.
 
 **Thủ công:**
 

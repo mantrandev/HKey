@@ -28,14 +28,19 @@ jobs:
         run: |
           MP=$(hdiutil attach build/HKey.dmg -nobrowse -readonly | grep Volumes | awk '{print $3}')
           test -d "$MP/HKey.app"
-          /usr/libexec/PlistBuddy -c "Print :CFBundleDisplayName" "$MP/HKey.app/Contents/Info.plist"
+          BIN="$MP/HKey.app/Contents/MacOS/HKey"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleDisplayName' "$MP/HKey.app/Contents/Info.plist")" = "HKey"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$MP/HKey.app/Contents/Info.plist")" = "com.mantrandev.hkey"
+          test "$(lipo -archs "$BIN")" = "arm64"
+          test "$(nm "$BIN" 2>/dev/null | wc -l | tr -d ' ')" -lt 600
           codesign -dv "$MP/HKey.app" 2>&1 | grep -q "Signature=adhoc"
+          echo "binary $(stat -f%z "$BIN") bytes, dmg $(stat -f%z build/HKey.dmg) bytes"
           hdiutil detach "$MP"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: HKey-dmg
+          name: HKey-dmg-${{ github.ref_name }}
           path: build/HKey.dmg
           if-no-files-found: error
 
