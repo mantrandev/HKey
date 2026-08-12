@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <g id="glyph" fill="none" stroke-linecap="round">
+      <line x1="287" y1="178.5" x2="287" y2="781.5"/>
+      <line x1="737" y1="178.5" x2="737" y2="781.5"/>
+      <line x1="287" y1="480" x2="737" y2="480"/>
+    </g>
+  </defs>
+  <use href="#glyph" stroke="#FFFFFF" stroke-width="175"/>
+  <use href="#glyph" stroke="#F66767" stroke-width="137"/>
+</svg>
