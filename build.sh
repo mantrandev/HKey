@@ -1,6 +1,11 @@
 #!/bin/bash
 set -eo pipefail
 
+if ! command -v create-dmg >/dev/null 2>&1; then
+  echo "✗ create-dmg chưa cài. Chạy: brew install create-dmg" >&2
+  exit 1
+fi
+
 PROJECT="Sources/macOS/Mkey.xcodeproj"
 SCHEME="Mkey"
 DERIVED="build/DerivedData"
