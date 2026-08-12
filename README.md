@@ -1,10 +1,10 @@
-# HKey VNI
+# HKey Telex
 
 Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantrandev/Mkey), bản thân Mkey fork từ [OpenKey](https://github.com/tuyenvm/OpenKey). Stripped down cho cá nhân.
 
 ## Tải về
 
-[**HKey-vni-v0.0.4.dmg**](https://github.com/mantrandev/HKey/releases/tag/vni-v0.0.4)
+[**HKey-telex-v0.0.4.dmg**](https://github.com/mantrandev/HKey/releases/tag/telex-v0.0.4)
 
 ## Screenshot
 
@@ -12,13 +12,10 @@ Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantra
 
 ## Tính năng
 
-- **Kiểu gõ:** VNI (cố định, không có toggle)
+- **Kiểu gõ:** Telex (cố định, không có toggle)
 - **Bảng mã:** Unicode
 - **Phím tắt chuyển ngôn ngữ:** `Ctrl + Space`
 - **Menu bar SwiftUI** — hiển thị `H` (tiếng Việt) hoặc `E` (tiếng Anh)
-- **Gõ dấu** ở bất kì chỗ nào trong từ ở VNI
-  - MinhBeo1 | MinhBe1o -> MinhBéo
-  - Diu91 | D9i1u -> Đíu
 
 ## Yêu cầu
 
@@ -40,7 +37,7 @@ macOS 14.0+.
 
 ```bash
 brew tap mantrandev/tap
-brew install --cask mantrandev/tap/hkey-vni
+brew install --cask mantrandev/tap/hkey-telex
 ```
 
 **Thủ công:**
