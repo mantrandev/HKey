@@ -6,9 +6,9 @@ Bộ gõ tiếng Việt cho macOS — fork từ [Mkey](https://github.com/mantra
 
 | Bản | Kiểu gõ | Link |
 |---|---|---|
-| Đầy đủ (Telex + VNI) | Telex / VNI | [HKey-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/v0.0.5) |
-| VNI only | VNI (cố định) | [HKey-vni-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/vni-v0.0.5) |
-| Telex only | Telex (cố định) | [HKey-telex-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/tag/telex-v0.0.5) |
+| Đầy đủ (Telex + VNI) | Telex / VNI | [HKey-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/download/v0.0.5/HKey-v0.0.5.dmg) |
+| VNI only | VNI (cố định) | [HKey-vni-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/download/vni-v0.0.5/HKey-vni-v0.0.5.dmg) |
+| Telex only | Telex (cố định) | [HKey-telex-v0.0.5.dmg](https://github.com/mantrandev/HKey/releases/download/telex-v0.0.5/HKey-telex-v0.0.5.dmg) |
 
 ## Screenshot
 
