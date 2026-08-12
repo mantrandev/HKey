@@ -426,7 +426,7 @@
 				OTHER_LDFLAGS = (
 					"-lc++\n-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.mkey.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.hkey.dev;
 				PRODUCT_NAME = HKey;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ModernKey/ModernKey-Bridging-Header.h";
@@ -454,7 +454,7 @@
 				OTHER_LDFLAGS = (
 					"-lc++\n-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.mkey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.hkey;
 				PRODUCT_NAME = HKey;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ModernKey/ModernKey-Bridging-Header.h";
