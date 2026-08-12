@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install create-dmg
+        run: brew install create-dmg
+
+      - name: Build and package DMG
+        run: ./build.sh
+
+      - name: Verify DMG contents
+        run: |
+          MP=$(hdiutil attach build/HKey.dmg -nobrowse -readonly | grep Volumes | awk '{print $3}')
+          test -d "$MP/HKey.app"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleDisplayName" "$MP/HKey.app/Contents/Info.plist"
+          codesign -dv "$MP/HKey.app" 2>&1 | grep -q "Signature=adhoc"
+          hdiutil detach "$MP"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HKey-dmg
+          path: build/HKey.dmg
+          if-no-files-found: error
+
+      - name: Attach DMG to release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp build/HKey.dmg "build/HKey-${GITHUB_REF_NAME}.dmg"
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 \
+            || gh release create "$GITHUB_REF_NAME" --title "HKey $GITHUB_REF_NAME" --generate-notes
+          gh release upload "$GITHUB_REF_NAME" "build/HKey-${GITHUB_REF_NAME}.dmg" --clobber
