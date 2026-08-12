@@ -17,7 +17,7 @@ struct MKeyApp: App {
             MenuView()
                 .environmentObject(state)
         } label: {
-            Text(state.isVietnamese ? "V" : "E")
+            Text(state.isVietnamese ? "H" : "E")
                 .font(.system(size: 20, weight: .bold))
         }
         .menuBarExtraStyle(.menu)
