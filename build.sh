@@ -4,9 +4,9 @@ set -e
 PROJECT="Sources/macOS/Mkey.xcodeproj"
 SCHEME="Mkey"
 DERIVED="build/DerivedData"
-APP_PATH="$DERIVED/Build/Products/Release/Mkey.app"
+APP_PATH="$DERIVED/Build/Products/Release/HKey.app"
 DMG_STAGING="build/dmg_staging"
-DMG_OUT="build/Mkey.dmg"
+DMG_OUT="build/HKey.dmg"
 
 echo "→ Building..."
 xcodebuild -project "$PROJECT" \
@@ -27,11 +27,11 @@ rm -rf "$DMG_STAGING" "$DMG_OUT"
 mkdir -p "$DMG_STAGING"
 cp -r "$APP_PATH" "$DMG_STAGING/"
 create-dmg \
-  --volname "Mkey" \
+  --volname "HKey" \
   --window-pos 200 120 \
   --window-size 500 300 \
   --icon-size 100 \
-  --icon "Mkey.app" 125 150 \
+  --icon "HKey.app" 125 150 \
   --app-drop-link 375 150 \
   --no-internet-enable \
   "$DMG_OUT" \

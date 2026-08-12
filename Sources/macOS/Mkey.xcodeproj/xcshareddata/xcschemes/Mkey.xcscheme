@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "232EDA5321F1B33E0085D362"
-               BuildableName = "Mkey.app"
+               BuildableName = "HKey.app"
                BlueprintName = "Mkey"
                ReferencedContainer = "container:Mkey.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "232EDA5321F1B33E0085D362"
-            BuildableName = "Mkey.app"
+            BuildableName = "HKey.app"
             BlueprintName = "Mkey"
             ReferencedContainer = "container:Mkey.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "232EDA5321F1B33E0085D362"
-            BuildableName = "Mkey.app"
+            BuildableName = "HKey.app"
             BlueprintName = "Mkey"
             ReferencedContainer = "container:Mkey.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "232EDA5321F1B33E0085D362"
-            BuildableName = "Mkey.app"
+            BuildableName = "HKey.app"
             BlueprintName = "Mkey"
             ReferencedContainer = "container:Mkey.xcodeproj">
          </BuildableReference>

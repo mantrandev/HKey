@@ -427,7 +427,7 @@
 					"-lc++\n-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.mkey.dev;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HKey;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ModernKey/ModernKey-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -455,7 +455,7 @@
 					"-lc++\n-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mantrandev.mkey;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HKey;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ModernKey/ModernKey-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
