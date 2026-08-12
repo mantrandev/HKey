@@ -20,8 +20,8 @@ final class AppState: ObservableObject {
         isVietnamese = savedMethod == 1
         vLanguage = savedMethod == 1 ? 1 : 0
 
-        vInputType = 1
-        UserDefaults.standard.set(1, forKey: "InputType")
+        vInputType = 0
+        UserDefaults.standard.set(0, forKey: "InputType")
 
         registerObservers()
     }
@@ -86,8 +86,8 @@ final class AppState: ObservableObject {
         vLanguage = 1
         UserDefaults.standard.set(1, forKey: "InputMethod")
 
-        vInputType = 1
-        UserDefaults.standard.set(1, forKey: "InputType")
+        vInputType = 0
+        UserDefaults.standard.set(0, forKey: "InputType")
 
         vFreeMark = 1
         UserDefaults.standard.set(1, forKey: "FreeMark")

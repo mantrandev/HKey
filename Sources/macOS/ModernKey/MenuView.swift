@@ -19,7 +19,7 @@ struct MenuView: View {
 
         Divider()
 
-        Button("HKey VNI • v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")") {
+        Button("HKey Telex • v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")") {
             if let url = URL(string: "https://github.com/mantrandev/HKey") {
                 NSWorkspace.shared.open(url)
             }
