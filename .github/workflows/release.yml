@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*"
+      - "vni-v*"
+      - "telex-v*"
   workflow_dispatch:
 
 permissions:

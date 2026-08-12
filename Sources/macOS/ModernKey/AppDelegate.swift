@@ -34,8 +34,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func askPermission() {
         let alert = NSAlert()
-        alert.messageText = "Mkey cần quyền Accessibility"
-        alert.informativeText = "Vào System Settings → Privacy & Security → Accessibility → bật Mkey.\n\nNhấn \"Mở Settings\" để đi thẳng đến đây."
+        alert.messageText = "HKey cần quyền Accessibility"
+        alert.informativeText = "Vào System Settings → Privacy & Security → Accessibility → bật HKey.\n\nNhấn \"Mở Settings\" để đi thẳng đến đây."
         alert.addButton(withTitle: "Mở Settings")
         alert.addButton(withTitle: "Để sau")
         alert.window.makeKeyAndOrderFront(nil)

@@ -31,8 +31,8 @@ struct MenuView: View {
 
         Divider()
 
-        Button("MKey") {
-            if let url = URL(string: "https://github.com/mantrandev/Mkey") {
+        Button("HKey") {
+            if let url = URL(string: "https://github.com/mantrandev/HKey") {
                 NSWorkspace.shared.open(url)
             }
         }
